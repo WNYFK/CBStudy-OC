@@ -1,0 +1,5 @@
+platform :ios, '10.0'
+
+target 'studyDemo' do
+  pod 'MLeaksFinder'
+end
