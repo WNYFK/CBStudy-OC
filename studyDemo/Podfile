@@ -2,4 +2,26 @@ platform :ios, '10.0'
 
 target 'studyDemo' do
   pod 'MLeaksFinder'
+  pod 'AFNetworking'
+  
+  pod 'SDWebImage'
+  pod 'YYWebImage'
+
+  pod 'YYModel'
+  pod 'Mantle'
+  pod 'JSONKit'
+  
+  pod 'YYCache'
+  
+  pod 'YYKeyboardManager'
+  pod 'IQKeyboardManager'
+  
+  pod 'YYAsyncLayer'
+  
+  pod 'YYDispatchQueuePool'
+  
+  pod 'YYCategories'
+  
+  pod 'Aspects'
+  pod 'BlocksKit'
 end
