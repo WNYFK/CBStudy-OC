@@ -9,7 +9,6 @@ target 'studyDemo' do
 
   pod 'YYModel'
   pod 'Mantle'
-  pod 'JSONKit'
   
   pod 'YYCache'
   
@@ -24,4 +23,6 @@ target 'studyDemo' do
   
   pod 'Aspects'
   pod 'BlocksKit'
+  
+  pod 'Masonry'
 end

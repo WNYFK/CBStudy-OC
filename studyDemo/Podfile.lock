@@ -32,10 +32,10 @@ PODS:
     - BlocksKit/DynamicDelegate
   - FBRetainCycleDetector (0.1.4)
   - IQKeyboardManager (6.2.0)
-  - JSONKit (1.4)
   - Mantle (2.1.0):
     - Mantle/extobjc (= 2.1.0)
   - Mantle/extobjc (2.1.0)
+  - Masonry (1.1.0)
   - MLeaksFinder (1.0.0):
     - FBRetainCycleDetector
   - SDWebImage (4.4.6):
@@ -61,8 +61,8 @@ DEPENDENCIES:
   - Aspects
   - BlocksKit
   - IQKeyboardManager
-  - JSONKit
   - Mantle
+  - Masonry
   - MLeaksFinder
   - SDWebImage
   - YYAsyncLayer
@@ -80,8 +80,8 @@ SPEC REPOS:
     - BlocksKit
     - FBRetainCycleDetector
     - IQKeyboardManager
-    - JSONKit
     - Mantle
+    - Masonry
     - MLeaksFinder
     - SDWebImage
     - YYAsyncLayer
@@ -99,8 +99,8 @@ SPEC CHECKSUMS:
   BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
   IQKeyboardManager: 6194101620b73af5e67900b8f89707a99de0b804
-  JSONKit: 5b69e804ea54d99293eed0fd2ce596c5703fefb0
   Mantle: 2fa750afa478cd625a94230fbf1c13462f29395b
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
   SDWebImage: 3f3f0c02f09798048c47a5ed0a13f17b063572d8
   YYAsyncLayer: df6b01ebc695c5f6b4c15dd5c23fa3e081eb25c0
@@ -112,6 +112,6 @@ SPEC CHECKSUMS:
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: bcf67174d540197721bbee11a10f19f9ac7bf850
+PODFILE CHECKSUM: b665f061565021aeab636c9684b46262ddd69e69
 
 COCOAPODS: 1.5.3
