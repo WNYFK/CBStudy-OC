@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		124F430886D26654539855BC /* libPods-studyDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3368B729AE35CEA0C2D0BC6 /* libPods-studyDemo.a */; };
+		3724858A2269B03A00C36DA3 /* CBTimerTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 372485892269B03A00C36DA3 /* CBTimerTestViewController.m */; };
+		3747B14A2269736E008ACED8 /* CBGestureTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3747B1492269736E008ACED8 /* CBGestureTestViewController.m */; };
+		3747B1542269795B008ACED8 /* UIScreen+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3747B1532269795B008ACED8 /* UIScreen+Addition.m */; };
+		3747B157226979C6008ACED8 /* UIView+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3747B156226979C6008ACED8 /* UIView+Addition.m */; };
+		3747B15A226979E5008ACED8 /* CBView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3747B159226979E5008ACED8 /* CBView.m */; };
 		379702A822631590000A98B1 /* CBMemoryObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3797029E22631590000A98B1 /* CBMemoryObject.m */; };
 		379702AA22631590000A98B1 /* CBMemoryFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 379702A022631590000A98B1 /* CBMemoryFirstViewController.m */; };
 		379702AB22631590000A98B1 /* CBMemoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 379702A122631590000A98B1 /* CBMemoryView.m */; };
@@ -24,6 +29,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		372485882269B03A00C36DA3 /* CBTimerTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBTimerTestViewController.h; sourceTree = "<group>"; };
+		372485892269B03A00C36DA3 /* CBTimerTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBTimerTestViewController.m; sourceTree = "<group>"; };
+		3747B1482269736E008ACED8 /* CBGestureTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBGestureTestViewController.h; sourceTree = "<group>"; };
+		3747B1492269736E008ACED8 /* CBGestureTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBGestureTestViewController.m; sourceTree = "<group>"; };
+		3747B1522269795B008ACED8 /* UIScreen+Addition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScreen+Addition.h"; sourceTree = "<group>"; };
+		3747B1532269795B008ACED8 /* UIScreen+Addition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+Addition.m"; sourceTree = "<group>"; };
+		3747B155226979C6008ACED8 /* UIView+Addition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Addition.h"; sourceTree = "<group>"; };
+		3747B156226979C6008ACED8 /* UIView+Addition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Addition.m"; sourceTree = "<group>"; };
+		3747B158226979E5008ACED8 /* CBView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBView.h; sourceTree = "<group>"; };
+		3747B159226979E5008ACED8 /* CBView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBView.m; sourceTree = "<group>"; };
 		3797029E22631590000A98B1 /* CBMemoryObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBMemoryObject.m; sourceTree = "<group>"; };
 		379702A022631590000A98B1 /* CBMemoryFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBMemoryFirstViewController.m; sourceTree = "<group>"; };
 		379702A122631590000A98B1 /* CBMemoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBMemoryView.m; sourceTree = "<group>"; };
@@ -66,6 +81,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		372485872269AFFC00C36DA3 /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				372485882269B03A00C36DA3 /* CBTimerTestViewController.h */,
+				372485892269B03A00C36DA3 /* CBTimerTestViewController.m */,
+			);
+			path = Timer;
+			sourceTree = "<group>";
+		};
+		3747B14722697344008ACED8 /* Gesture */ = {
+			isa = PBXGroup;
+			children = (
+				3747B1482269736E008ACED8 /* CBGestureTestViewController.h */,
+				3747B1492269736E008ACED8 /* CBGestureTestViewController.m */,
+			);
+			path = Gesture;
+			sourceTree = "<group>";
+		};
+		3747B14E22697883008ACED8 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				3747B1522269795B008ACED8 /* UIScreen+Addition.h */,
+				3747B1532269795B008ACED8 /* UIScreen+Addition.m */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
 		3797029D22631590000A98B1 /* MemoryLeaks */ = {
 			isa = PBXGroup;
 			children = (
@@ -90,15 +132,12 @@
 				379702B6226316C2000A98B1 /* CBBaseTableViewCell.m */,
 				379702B822631F0E000A98B1 /* CBBaseViewController.h */,
 				379702B922631F0E000A98B1 /* CBBaseViewController.m */,
+				3747B155226979C6008ACED8 /* UIView+Addition.h */,
+				3747B156226979C6008ACED8 /* UIView+Addition.m */,
+				3747B158226979E5008ACED8 /* CBView.h */,
+				3747B159226979E5008ACED8 /* CBView.m */,
 			);
 			path = UIKit;
-			sourceTree = "<group>";
-		};
-		379702AE22631637000A98B1 /* Foundation */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Foundation;
 			sourceTree = "<group>";
 		};
 		37BA8BC62260AB7100991190 = {
@@ -122,7 +161,9 @@
 		37BA8BD12260AB7100991190 /* studyDemo */ = {
 			isa = PBXGroup;
 			children = (
-				379702AE22631637000A98B1 /* Foundation */,
+				372485872269AFFC00C36DA3 /* Timer */,
+				3747B14E22697883008ACED8 /* Foundation */,
+				3747B14722697344008ACED8 /* Gesture */,
 				379702AD22631637000A98B1 /* UIKit */,
 				3797029D22631590000A98B1 /* MemoryLeaks */,
 				379702A622631590000A98B1 /* CBHomeViewController.h */,
@@ -167,6 +208,7 @@
 				37BA8BCB2260AB7100991190 /* Sources */,
 				37BA8BCC2260AB7100991190 /* Frameworks */,
 				37BA8BCD2260AB7100991190 /* Resources */,
+				51F3790730AF49D41356A521 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -222,6 +264,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		51F3790730AF49D41356A521 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-studyDemo/Pods-studyDemo-resources.sh",
+				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-studyDemo/Pods-studyDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D73B5D8792A61BC9154CA0A3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -254,14 +318,19 @@
 				379702B422631699000A98B1 /* CBBaseCellItem.m in Sources */,
 				379702A822631590000A98B1 /* CBMemoryObject.m in Sources */,
 				37BA8BD72260AB7100991190 /* ViewController.m in Sources */,
+				3747B14A2269736E008ACED8 /* CBGestureTestViewController.m in Sources */,
 				379702BA22631F0E000A98B1 /* CBBaseViewController.m in Sources */,
+				3747B1542269795B008ACED8 /* UIScreen+Addition.m in Sources */,
 				37BA8BE22260AB7200991190 /* main.m in Sources */,
 				379702B7226316C2000A98B1 /* CBBaseTableViewCell.m in Sources */,
+				3747B157226979C6008ACED8 /* UIView+Addition.m in Sources */,
 				379702AB22631590000A98B1 /* CBMemoryView.m in Sources */,
 				379702B122631658000A98B1 /* CBBaseTableViewController.m in Sources */,
+				3724858A2269B03A00C36DA3 /* CBTimerTestViewController.m in Sources */,
 				37BA8BD42260AB7100991190 /* AppDelegate.m in Sources */,
 				379702AC22631590000A98B1 /* CBHomeViewController.m in Sources */,
 				379702AA22631590000A98B1 /* CBMemoryFirstViewController.m in Sources */,
+				3747B15A226979E5008ACED8 /* CBView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,7 +8,7 @@
 
 #import "CBHomeViewController.h"
 #import "CBMemoryFirstViewController.h"
-
+#import "CBGestureTestViewController.h"
 
 @interface CBHomeViewController ()
 
@@ -24,7 +24,11 @@
     CBBaseCellItem *memoryLeaksItem = [[CBBaseCellItem alloc] initWithTitle:@"内存检测" clickBlock:^{
         [self.navigationController pushViewController:[CBMemoryFirstViewController new] animated:YES];
     }];
+    CBBaseCellItem *gestureItem = [[CBBaseCellItem alloc] initWithTitle:@"手势" clickBlock:^{
+        [self.navigationController pushViewController:[CBGestureTestViewController new] animated:YES];
+    }];
     [self.cellItems addObject:memoryLeaksItem];
+    [self.cellItems addObject:gestureItem];
 }
 
 

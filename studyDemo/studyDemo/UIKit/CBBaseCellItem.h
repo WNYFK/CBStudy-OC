@@ -8,8 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
 typedef void(^CBCellClickBlock)(void);
 
 @interface CBBaseCellItem : NSObject
@@ -22,5 +20,3 @@ typedef void(^CBCellClickBlock)(void);
 - (instancetype)initWithTitle:(NSString *)title clickBlock:(CBCellClickBlock)clickBlock;
 
 @end
-
-NS_ASSUME_NONNULL_END
