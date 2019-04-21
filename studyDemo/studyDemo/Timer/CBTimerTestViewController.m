@@ -86,7 +86,7 @@
         [self.gcdTimerBtn setTitle:@"GCD start" forState:UIControlStateNormal];
         self.gcdTimer = nil;
     } else {
-        self.gcdTimer = [GCDTimer scheduledTimerWithTimeInterval:1 repeats:YES block:^{
+        self.gcdTimer = [GCDTimer scheduledTimerWithTimeInterval:1 repeats:NO block:^{
             NSLog(@"gcd timer");
         }];
         [self.gcdTimerBtn setTitle:@"gcd timer stop" forState:UIControlStateNormal];

@@ -36,10 +36,12 @@
 }
 
 - (void)resume {
+    if (!self.timer) { return; }
     dispatch_resume(_timer);
 }
 
 - (void)cancel {
+    if (!self.timer) { return; }
     dispatch_cancel(_timer);
     _timer = nil;
 }
