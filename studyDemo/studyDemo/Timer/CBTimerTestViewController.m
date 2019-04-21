@@ -12,11 +12,14 @@
 
 @interface CBTimerTestViewController ()
 
-@property (nonatomic, strong) NSTimer *timer;
+@property (nonatomic, strong) NSTimer *timer1;
+@property (nonatomic, strong) NSTimer *timer2;
 @property (nonatomic, strong) UIButton *timerBtn;
 
+@property (nonatomic, strong) dispatch_source_t gcdTimer;
 @property (nonatomic, strong) UIButton *gcdTimerBtn;
 
+@property (nonatomic, strong) CADisplayLink *displayLink;
 @property (nonatomic, strong) UIButton *displayLinkBtn;
 
 @end
@@ -28,6 +31,7 @@
     
     self.timerBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.timerBtn setTitle:@"timer Start" forState:UIControlStateNormal];
+    [self.timerBtn setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
     [_timerBtn addTarget:self action:@selector(timerStart) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_timerBtn];
     [_timerBtn mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -38,6 +42,7 @@
     
     self.gcdTimerBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.gcdTimerBtn setTitle:@"GCD start" forState:UIControlStateNormal];
+    [self.gcdTimerBtn setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
     [self.gcdTimerBtn addTarget:self action:@selector(gcdTimerStart) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.gcdTimerBtn];
     [self.gcdTimerBtn mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -47,6 +52,7 @@
     
     self.displayLinkBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.displayLinkBtn setTitle:@"DisplayLink start" forState:UIControlStateNormal];
+    [self.displayLinkBtn setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
     [self.displayLinkBtn addTarget:self action:@selector(displayLinkStart) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.displayLinkBtn];
     [self.displayLinkBtn mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -56,15 +62,55 @@
 }
 
 - (void)timerStart {
-    
+    if (self.timer1) {
+        [self.timer1 invalidate];
+        [self.timer2 invalidate];
+        [self.timerBtn setTitle:@"timer start" forState:UIControlStateNormal];
+        self.timer1 = nil;
+        self.timer2 = nil;
+    } else {
+        self.timer1 = [NSTimer scheduledTimerWithTimeInterval:1 repeats:YES block:^(NSTimer * _Nonnull timer) {
+            NSLog(@"NSTimer scheduledTimer");
+        }];
+        self.timer2 = [NSTimer timerWithTimeInterval:1 repeats:YES block:^(NSTimer * _Nonnull timer) {
+            NSLog(@"NSTimer timer");
+        }];
+        [[NSRunLoop currentRunLoop] addTimer:self.timer2 forMode:NSRunLoopCommonModes];
+        [self.timerBtn setTitle:@"timer stop" forState:UIControlStateNormal];
+    }
 }
 
 - (void)gcdTimerStart {
-    
+    if (self.gcdTimer) {
+        dispatch_cancel(self.gcdTimer);
+        [self.gcdTimerBtn setTitle:@"GCD start" forState:UIControlStateNormal];
+        self.gcdTimer = nil;
+    } else {
+        self.gcdTimer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, dispatch_get_main_queue());
+        dispatch_source_set_timer(self.gcdTimer, dispatch_walltime(NULL, 0), NSEC_PER_SEC, 0);
+        dispatch_source_set_event_handler(self.gcdTimer, ^{
+            NSLog(@"gcd timer");
+        });
+        dispatch_resume(self.gcdTimer);
+        [self.gcdTimerBtn setTitle:@"gcd timer stop" forState:UIControlStateNormal];
+    }
 }
 
 - (void)displayLinkStart {
-    
+    if (self.displayLink) {
+        [self.displayLink invalidate];
+        self.displayLink = nil;
+        [self.displayLinkBtn setTitle:@"DisplayLink start" forState:UIControlStateNormal];
+    } else {
+        self.displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(displayLinkHandle)];
+        self.displayLink.preferredFramesPerSecond = 1;
+        [self.displayLink addToRunLoop:NSRunLoop.mainRunLoop forMode:NSRunLoopCommonModes];
+        [self.displayLinkBtn setTitle:@"displaylink stop" forState:UIControlStateNormal];
+    }
+}
+
+- (void)displayLinkHandle {
+    NSLog(@"displayLink");
 }
 
 

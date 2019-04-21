@@ -9,6 +9,7 @@
 #import "CBHomeViewController.h"
 #import "CBMemoryFirstViewController.h"
 #import "CBGestureTestViewController.h"
+#import "CBTimerTestViewController.h"
 
 @interface CBHomeViewController ()
 
@@ -27,8 +28,10 @@
     CBBaseCellItem *gestureItem = [[CBBaseCellItem alloc] initWithTitle:@"手势" clickBlock:^{
         [self.navigationController pushViewController:[CBGestureTestViewController new] animated:YES];
     }];
-    [self.cellItems addObject:memoryLeaksItem];
-    [self.cellItems addObject:gestureItem];
+    CBBaseCellItem *timerItem = [[CBBaseCellItem alloc] initWithTitle:@"Timer i相关" clickBlock:^{
+        [self.navigationController pushViewController:CBTimerTestViewController.new animated:YES];
+    }];
+    self.cellItems = [NSMutableArray arrayWithObjects:memoryLeaksItem, gestureItem, timerItem, nil];
 }
 
 
