@@ -8,7 +8,7 @@
 
 #import "CBTimerTestViewController.h"
 #import <Masonry.h>
-
+#import "GCDTimer.h"
 
 @interface CBTimerTestViewController ()
 
@@ -16,7 +16,7 @@
 @property (nonatomic, strong) NSTimer *timer2;
 @property (nonatomic, strong) UIButton *timerBtn;
 
-@property (nonatomic, strong) dispatch_source_t gcdTimer;
+@property (nonatomic, strong) GCDTimer *gcdTimer;
 @property (nonatomic, strong) UIButton *gcdTimerBtn;
 
 @property (nonatomic, strong) CADisplayLink *displayLink;
@@ -82,16 +82,13 @@
 
 - (void)gcdTimerStart {
     if (self.gcdTimer) {
-        dispatch_cancel(self.gcdTimer);
+        [self.gcdTimer cancel];
         [self.gcdTimerBtn setTitle:@"GCD start" forState:UIControlStateNormal];
         self.gcdTimer = nil;
     } else {
-        self.gcdTimer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, dispatch_get_main_queue());
-        dispatch_source_set_timer(self.gcdTimer, dispatch_walltime(NULL, 0), NSEC_PER_SEC, 0);
-        dispatch_source_set_event_handler(self.gcdTimer, ^{
+        self.gcdTimer = [GCDTimer scheduledTimerWithTimeInterval:1 repeats:YES block:^{
             NSLog(@"gcd timer");
-        });
-        dispatch_resume(self.gcdTimer);
+        }];
         [self.gcdTimerBtn setTitle:@"gcd timer stop" forState:UIControlStateNormal];
     }
 }

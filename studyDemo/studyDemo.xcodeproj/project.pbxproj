@@ -21,6 +21,7 @@
 		379702B422631699000A98B1 /* CBBaseCellItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 379702B322631699000A98B1 /* CBBaseCellItem.m */; };
 		379702B7226316C2000A98B1 /* CBBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 379702B6226316C2000A98B1 /* CBBaseTableViewCell.m */; };
 		379702BA22631F0E000A98B1 /* CBBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 379702B922631F0E000A98B1 /* CBBaseViewController.m */; };
+		379702BD226C18F9000A98B1 /* GCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 379702BC226C18F9000A98B1 /* GCDTimer.m */; };
 		37BA8BD42260AB7100991190 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BA8BD32260AB7100991190 /* AppDelegate.m */; };
 		37BA8BD72260AB7100991190 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BA8BD62260AB7100991190 /* ViewController.m */; };
 		37BA8BDC2260AB7200991190 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37BA8BDB2260AB7200991190 /* Assets.xcassets */; };
@@ -55,6 +56,8 @@
 		379702B6226316C2000A98B1 /* CBBaseTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBBaseTableViewCell.m; sourceTree = "<group>"; };
 		379702B822631F0E000A98B1 /* CBBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBBaseViewController.h; sourceTree = "<group>"; };
 		379702B922631F0E000A98B1 /* CBBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBBaseViewController.m; sourceTree = "<group>"; };
+		379702BB226C18F9000A98B1 /* GCDTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDTimer.h; sourceTree = "<group>"; };
+		379702BC226C18F9000A98B1 /* GCDTimer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDTimer.m; sourceTree = "<group>"; };
 		37BA8BCF2260AB7100991190 /* studyDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = studyDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37BA8BD22260AB7100991190 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		37BA8BD32260AB7100991190 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -104,6 +107,8 @@
 			children = (
 				3747B1522269795B008ACED8 /* UIScreen+Addition.h */,
 				3747B1532269795B008ACED8 /* UIScreen+Addition.m */,
+				379702BB226C18F9000A98B1 /* GCDTimer.h */,
+				379702BC226C18F9000A98B1 /* GCDTimer.m */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -321,6 +326,7 @@
 				3747B14A2269736E008ACED8 /* CBGestureTestViewController.m in Sources */,
 				379702BA22631F0E000A98B1 /* CBBaseViewController.m in Sources */,
 				3747B1542269795B008ACED8 /* UIScreen+Addition.m in Sources */,
+				379702BD226C18F9000A98B1 /* GCDTimer.m in Sources */,
 				37BA8BE22260AB7200991190 /* main.m in Sources */,
 				379702B7226316C2000A98B1 /* CBBaseTableViewCell.m in Sources */,
 				3747B157226979C6008ACED8 /* UIView+Addition.m in Sources */,
