@@ -13,6 +13,7 @@
 		3747B1542269795B008ACED8 /* UIScreen+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3747B1532269795B008ACED8 /* UIScreen+Addition.m */; };
 		3747B157226979C6008ACED8 /* UIView+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3747B156226979C6008ACED8 /* UIView+Addition.m */; };
 		3747B15A226979E5008ACED8 /* CBView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3747B159226979E5008ACED8 /* CBView.m */; };
+		375C1AA5226D6946004B8148 /* CBAspectsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 375C1AA4226D6946004B8148 /* CBAspectsViewController.m */; };
 		379702A822631590000A98B1 /* CBMemoryObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3797029E22631590000A98B1 /* CBMemoryObject.m */; };
 		379702AA22631590000A98B1 /* CBMemoryFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 379702A022631590000A98B1 /* CBMemoryFirstViewController.m */; };
 		379702AB22631590000A98B1 /* CBMemoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 379702A122631590000A98B1 /* CBMemoryView.m */; };
@@ -40,6 +41,8 @@
 		3747B156226979C6008ACED8 /* UIView+Addition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Addition.m"; sourceTree = "<group>"; };
 		3747B158226979E5008ACED8 /* CBView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBView.h; sourceTree = "<group>"; };
 		3747B159226979E5008ACED8 /* CBView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBView.m; sourceTree = "<group>"; };
+		375C1AA3226D6946004B8148 /* CBAspectsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBAspectsViewController.h; sourceTree = "<group>"; };
+		375C1AA4226D6946004B8148 /* CBAspectsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBAspectsViewController.m; sourceTree = "<group>"; };
 		3797029E22631590000A98B1 /* CBMemoryObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBMemoryObject.m; sourceTree = "<group>"; };
 		379702A022631590000A98B1 /* CBMemoryFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBMemoryFirstViewController.m; sourceTree = "<group>"; };
 		379702A122631590000A98B1 /* CBMemoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBMemoryView.m; sourceTree = "<group>"; };
@@ -113,6 +116,15 @@
 			path = Foundation;
 			sourceTree = "<group>";
 		};
+		375C1AA2226D665E004B8148 /* AspectsTest */ = {
+			isa = PBXGroup;
+			children = (
+				375C1AA3226D6946004B8148 /* CBAspectsViewController.h */,
+				375C1AA4226D6946004B8148 /* CBAspectsViewController.m */,
+			);
+			path = AspectsTest;
+			sourceTree = "<group>";
+		};
 		3797029D22631590000A98B1 /* MemoryLeaks */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +178,7 @@
 		37BA8BD12260AB7100991190 /* studyDemo */ = {
 			isa = PBXGroup;
 			children = (
+				375C1AA2226D665E004B8148 /* AspectsTest */,
 				372485872269AFFC00C36DA3 /* Timer */,
 				3747B14E22697883008ACED8 /* Foundation */,
 				3747B14722697344008ACED8 /* Gesture */,
@@ -333,6 +346,7 @@
 				379702AB22631590000A98B1 /* CBMemoryView.m in Sources */,
 				379702B122631658000A98B1 /* CBBaseTableViewController.m in Sources */,
 				3724858A2269B03A00C36DA3 /* CBTimerTestViewController.m in Sources */,
+				375C1AA5226D6946004B8148 /* CBAspectsViewController.m in Sources */,
 				37BA8BD42260AB7100991190 /* AppDelegate.m in Sources */,
 				379702AC22631590000A98B1 /* CBHomeViewController.m in Sources */,
 				379702AA22631590000A98B1 /* CBMemoryFirstViewController.m in Sources */,
