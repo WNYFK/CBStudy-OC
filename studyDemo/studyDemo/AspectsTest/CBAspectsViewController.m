@@ -18,6 +18,7 @@
 @interface CBAspectsTestObject : CBAspectsTestBaseObject
 @property (nonatomic, strong) NSString *name;
 
++ (void)foo;
 - (void)testMethod;
 
 @end
@@ -41,11 +42,14 @@
 //    [self aspect_hookSelector:@selector(viewDidAppear:) withOptions:AspectPositionBefore usingBlock:^{
 //        NSLog(@"aspect_viewdidAppear before");
 //    } error:nil];
-    
+//    [CBAspectsTestObject foo];
+//    [[CBAspectsTestObject new] foo];
     CBAspectsTestObject *testObj1 = [CBAspectsTestObject new];
     testObj1.name = @"testObj1 name";
     CBAspectsTestObject *testObj2 = [CBAspectsTestObject new];
     testObj2.name = @"testObj2 name";
+    NSLog(@"self.class:%@",testObj2.class);
+    NSLog(@"isa class:%s",object_getClassName(testObj2));
 //    [CBAspectsTestObject aspect_hookSelector:@selector(testMethod) withOptions:AspectPositionBefore usingBlock:^{
 //        NSLog(@"meta Class aspect before");
 //    } error:nil];
@@ -67,9 +71,13 @@
     } error:nil];
     [testObj1 superMethod];
     [testObj2 superMethod];
+    NSLog(@"hook self.class:%@",testObj2.class);
+    NSLog(@"hook isa class:%s",object_getClassName(testObj2));
 //    [testObj1 testMethod];
 //    [testObj2 testMethod];
     
+    BOOL res1 = [[NSObject class] isKindOfClass:[NSObject class]];
+    NSLog(@"%d",res1);
 }
 
 - (void)aspect_viewDidAppear:(BOOL)animated {
@@ -81,6 +89,9 @@
 
 @implementation CBAspectsTestObject
 
+- (void)foo {
+    NSLog(@"IMP: -[CBAspectsTestObject foo]");
+}
 - (void)testMethod {
     NSLog(@"CBAspectsTestObject:%@",self.name);
 }
