@@ -8,6 +8,10 @@
 
 #import "CBBlockTestViewController.h"
 
+//https://desgard.gitbooks.io/source-probe/content/Objective-C/Runtime/%E6%B5%85%E8%B0%88%20block%EF%BC%882%EF%BC%89%20-%20%E6%88%AA%E8%8E%B7%E5%8F%98%E9%87%8F%E6%96%B9%E5%BC%8F.html
+//http://ju.outofmemory.cn/entry/305053
+//https://www.zybuluo.com/MicroCai/note/51116
+
 typedef void(^CBBlock)(NSObject *);
 
 @interface CBBlockTestViewController ()
