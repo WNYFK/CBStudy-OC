@@ -12,6 +12,7 @@
 #import "CBTimerTestViewController.h"
 #import "CBAspectsViewController.h"
 #import "CBBlockTestViewController.h"
+#import "CBBlocksKitTestViewController.h"
 
 
 @interface CBHomeViewController ()
@@ -40,7 +41,10 @@
     CBBaseCellItem *blockItem = [[CBBaseCellItem alloc] initWithTitle:@"block" clickBlock:^{
         [self.navigationController pushViewController:CBBlockTestViewController.new animated:YES];
     }];
-    self.cellItems = [NSMutableArray arrayWithObjects:memoryLeaksItem, gestureItem, timerItem, aspectsItem, blockItem, nil];
+    CBBaseCellItem *blocksKitItem = [[CBBaseCellItem alloc] initWithTitle:@"blockskit" clickBlock:^{
+        [self.navigationController pushViewController:CBBlocksKitTestViewController.new animated:YES];
+    }];
+    self.cellItems = [NSMutableArray arrayWithObjects:memoryLeaksItem, gestureItem, timerItem, aspectsItem, blockItem, blocksKitItem, nil];
 }
 
 
