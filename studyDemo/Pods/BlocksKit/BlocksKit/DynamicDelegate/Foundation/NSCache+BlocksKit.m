@@ -36,8 +36,8 @@
 + (void)load
 {
 	@autoreleasepool {
-		[self bk_registerDynamicDelegate];
-		[self bk_linkDelegateMethods:@{ @"bk_willEvictBlock": @"cache:willEvictObject:" }];
+//        [self bk_registerDynamicDelegate];
+//        [self bk_linkDelegateMethods:@{ @"bk_willEvictBlock": @"cache:willEvictObject:" }];
 	}
 }
 

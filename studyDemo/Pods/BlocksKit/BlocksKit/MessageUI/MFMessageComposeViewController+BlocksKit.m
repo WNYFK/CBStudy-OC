@@ -62,8 +62,8 @@
 + (void)load
 {
 	@autoreleasepool {
-		[self bk_registerDynamicDelegateNamed:@"messageComposeDelegate"];
-		[self bk_linkDelegateMethods:@{ @"bk_completionBlock": @"messageComposeViewController:didFinishWithResult:" }];
+//        [self bk_registerDynamicDelegateNamed:@"messageComposeDelegate"];
+//        [self bk_linkDelegateMethods:@{ @"bk_completionBlock": @"messageComposeViewController:didFinishWithResult:" }];
 	}
 }
 

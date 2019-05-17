@@ -86,13 +86,13 @@
 + (void)load
 {
 	@autoreleasepool {
-		[self bk_registerDynamicDelegate];
-		[self bk_linkDelegateMethods:@{
-			@"bk_willShowBlock": @"willPresentActionSheet:",
-			@"bk_didShowBlock": @"didPresentActionSheet:",
-			@"bk_willDismissBlock": @"actionSheet:willDismissWithButtonIndex:",
-			@"bk_didDismissBlock": @"actionSheet:didDismissWithButtonIndex:"
-		}];
+//        [self bk_registerDynamicDelegate];
+//        [self bk_linkDelegateMethods:@{
+//            @"bk_willShowBlock": @"willPresentActionSheet:",
+//            @"bk_didShowBlock": @"didPresentActionSheet:",
+//            @"bk_willDismissBlock": @"actionSheet:willDismissWithButtonIndex:",
+//            @"bk_didDismissBlock": @"actionSheet:didDismissWithButtonIndex:"
+//        }];
 	}
 }
 

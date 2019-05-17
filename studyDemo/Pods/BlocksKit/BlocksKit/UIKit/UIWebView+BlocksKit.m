@@ -66,13 +66,13 @@
 + (void)load
 {
 	@autoreleasepool {
-		[self bk_registerDynamicDelegate];
-		[self bk_linkDelegateMethods:@{
-			@"bk_shouldStartLoadBlock": @"webView:shouldStartLoadWithRequest:navigationType:",
-			@"bk_didStartLoadBlock": @"webViewDidStartLoad:",
-			@"bk_didFinishLoadBlock": @"webViewDidFinishLoad:",
-			@"bk_didFinishWithErrorBlock": @"webView:didFailLoadWithError:"
-		}];
+//        [self bk_registerDynamicDelegate];
+//        [self bk_linkDelegateMethods:@{
+//            @"bk_shouldStartLoadBlock": @"webView:shouldStartLoadWithRequest:navigationType:",
+//            @"bk_didStartLoadBlock": @"webViewDidStartLoad:",
+//            @"bk_didFinishLoadBlock": @"webViewDidFinishLoad:",
+//            @"bk_didFinishWithErrorBlock": @"webView:didFailLoadWithError:"
+//        }];
 	}
 }
 

@@ -13,6 +13,7 @@
 #import "CBAspectsViewController.h"
 #import "CBBlockTestViewController.h"
 #import "CBBlocksKitTestViewController.h"
+#import "CBNSProxyTestViewController.h"
 
 
 @interface CBHomeViewController ()
@@ -44,7 +45,10 @@
     CBBaseCellItem *blocksKitItem = [[CBBaseCellItem alloc] initWithTitle:@"blockskit" clickBlock:^{
         [self.navigationController pushViewController:CBBlocksKitTestViewController.new animated:YES];
     }];
-    self.cellItems = [NSMutableArray arrayWithObjects:memoryLeaksItem, gestureItem, timerItem, aspectsItem, blockItem, blocksKitItem, nil];
+    CBBaseCellItem *proxyItem = [[CBBaseCellItem alloc] initWithTitle:@"NSProxy" clickBlock:^{
+        [self.navigationController pushViewController:CBNSProxyTestViewController.new animated:YES];
+    }];
+    self.cellItems = [NSMutableArray arrayWithObjects:memoryLeaksItem, gestureItem, timerItem, aspectsItem, blockItem, blocksKitItem, proxyItem, nil];
 }
 
 

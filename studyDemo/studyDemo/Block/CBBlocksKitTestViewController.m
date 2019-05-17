@@ -18,14 +18,18 @@
 
 @implementation CBBlocksKitTestViewController
 
+- (void)dealloc {
+    NSLog(@"dealloc");
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self bk_addObserverForKeyPath:@"name" task:^(id target) {
         NSLog(@"%@",target);
     }];
-    [GCDTimer scheduledTimerWithTimeInterval:5 repeats:YES block:^{
-        self.name = [NSString stringWithFormat:@"11%@",self.name];
-    }];
+//    [GCDTimer scheduledTimerWithTimeInterval:5 repeats:YES block:^{
+//        self.name = [NSString stringWithFormat:@"11%@",self.name];
+//    }];
 }
 
 

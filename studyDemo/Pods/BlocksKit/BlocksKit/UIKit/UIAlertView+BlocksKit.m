@@ -114,14 +114,14 @@
 + (void)load
 {
 	@autoreleasepool {
-		[self bk_registerDynamicDelegate];
-		[self bk_linkDelegateMethods:@{
-			@"bk_willShowBlock": @"willPresentAlertView:",
-			@"bk_didShowBlock": @"didPresentAlertView:",
-			@"bk_willDismissBlock": @"alertView:willDismissWithButtonIndex:",
-			@"bk_didDismissBlock": @"alertView:didDismissWithButtonIndex:",
-			@"bk_shouldEnableFirstOtherButtonBlock": @"alertViewShouldEnableFirstOtherButton:"
-		}];
+//        [self bk_registerDynamicDelegate];
+//        [self bk_linkDelegateMethods:@{
+//            @"bk_willShowBlock": @"willPresentAlertView:",
+//            @"bk_didShowBlock": @"didPresentAlertView:",
+//            @"bk_willDismissBlock": @"alertView:willDismissWithButtonIndex:",
+//            @"bk_didDismissBlock": @"alertView:didDismissWithButtonIndex:",
+//            @"bk_shouldEnableFirstOtherButtonBlock": @"alertViewShouldEnableFirstOtherButton:"
+//        }];
 	}
 }
 

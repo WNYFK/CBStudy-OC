@@ -340,8 +340,8 @@ static NSString *const kDownloadBlockKey = @"NSURLConnectionDidRecieveData";
 + (void)load
 {
 	@autoreleasepool {
-		[self bk_registerDynamicDelegate];
-		[self bk_linkDelegateMethods:@{ @"bk_responseBlock": @"connection:didReceiveResponse:", @"bk_failureBlock": @"connection:didFailWithError:" }];
+//        [self bk_registerDynamicDelegate];
+//        [self bk_linkDelegateMethods:@{ @"bk_responseBlock": @"connection:didReceiveResponse:", @"bk_failureBlock": @"connection:didFailWithError:" }];
 	}
 }
 

@@ -62,8 +62,8 @@
 + (void)load
 {
 	@autoreleasepool {
-		[self bk_registerDynamicDelegateNamed:@"mailComposeDelegate"];
-		[self bk_linkDelegateMethods:@{ @"bk_completionBlock": @"mailComposeController:didFinishWithResult:error:" }];
+//        [self bk_registerDynamicDelegateNamed:@"mailComposeDelegate"];
+//        [self bk_linkDelegateMethods:@{ @"bk_completionBlock": @"mailComposeController:didFinishWithResult:error:" }];
 	}
 }
 
